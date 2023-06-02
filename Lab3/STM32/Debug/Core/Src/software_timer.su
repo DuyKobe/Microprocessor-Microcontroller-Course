@@ -1,0 +1,9 @@
+../Core/Src/software_timer.c:15:5:redFlag	4	static
+../Core/Src/software_timer.c:23:5:greenFlag	4	static
+../Core/Src/software_timer.c:31:5:enableFlag	4	static
+../Core/Src/software_timer.c:39:5:oneSecondFlag	4	static
+../Core/Src/software_timer.c:47:6:setTimerRed	4	static
+../Core/Src/software_timer.c:51:6:setTimerGreen	4	static
+../Core/Src/software_timer.c:55:6:setTimerEnable	4	static
+../Core/Src/software_timer.c:59:6:setOneSecond	4	static
+../Core/Src/software_timer.c:63:6:timerRun	4	static

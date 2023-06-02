@@ -1,0 +1,3 @@
+../Core/Src/ctr_7seg.c:12:6:turnSeg0	16	static
+../Core/Src/ctr_7seg.c:22:6:turnSeg1	16	static
+../Core/Src/ctr_7seg.c:32:6:enableSeg	16	static
