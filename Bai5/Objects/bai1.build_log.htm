@@ -1,0 +1,215 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: st Admin, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\Chuyen nganh\Keilc\Bai5\bai3.uvprojx
+Project File Date:  10/06/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+systick.c(1): warning: In file included from...
+./systick.h(6): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Configuration();
+                          ^
+                           void
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Handler();
+                    ^
+                     void
+systick.c(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Configuration(){
+                          ^
+                           void
+systick.c(6): warning: // comments are not allowed in this language [-Wcomment]
+        SysTick ->LOAD = 16000 - 1;//T_systick = 1 ms and clock system = 16Mhz
+                                   ^
+systick.c(4): warning: no previous prototype for function 'SysTick_Configuration' [-Wmissing-prototypes]
+void SysTick_Configuration(){
+     ^
+./systick.h(6): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void SysTick_Configuration();
+     ^
+                           void
+5 warnings generated.
+compiling systick.c...
+RTE/Device/STM32F407VGTx/system_stm32f4xx.c(67): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+2 warnings generated.
+compiling system_stm32f4xx.c...
+assembling startup_stm32f407xx.s...
+main.c(22): warning: no previous extern declaration for non-static variable 'k' [-Wmissing-variable-declarations]
+int k = 0;
+    ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int k = 0;
+^
+main.c(23): warning: no previous extern declaration for non-static variable 'RxComByte' [-Wmissing-variable-declarations]
+char RxComByte = 0;
+     ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char RxComByte = 0;
+^
+main.c(25): warning: no previous extern declaration for non-static variable 'str' [-Wmissing-variable-declarations]
+char str[] = "Hello World\r\n";
+     ^
+main.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char str[] = "Hello World\r\n";
+^
+main.c(29): warning: no previous extern declaration for non-static variable 'flag' [-Wmissing-variable-declarations]
+        int flag =0;
+            ^
+main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int flag =0;
+        ^
+main.c(30): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Handler();
+                    ^
+                     void
+main.c(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main(){
+        ^
+         void
+main.c(99): warning: implicit declaration of function 'SysTick_Configuration' [-Wimplicit-function-declaration]
+        SysTick_Configuration();
+        ^
+main.c(116): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        USART_Write(USART2, buffer, n);
+        ~~~~~~~~~~~                 ^
+main.c(126): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(128): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void SysTick_Handler(){
+                    ^
+                     void
+main.c(128): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(){
+     ^
+main.c(30): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void SysTick_Handler();
+     ^
+                     void
+main.c(24): warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+uint8_t buffer[BufferSize];
+        ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t buffer[BufferSize];
+^
+main.c(26): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+char data;
+     ^
+main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char data;
+^
+main.c(27): warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+        int a, n;
+            ^
+main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int a, n;
+        ^
+main.c(27): warning: no previous extern declaration for non-static variable 'n' [-Wmissing-variable-declarations]
+        int a, n;
+               ^
+main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int a, n;
+        ^
+main.c(28): warning: no previous extern declaration for non-static variable 'b' [-Wmissing-variable-declarations]
+        float b;
+              ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        float b;
+        ^
+16 warnings generated.
+compiling main.c...
+UART.c(4): warning: // comments are not allowed in this language [-Wcomment]
+// UART Ports:
+^
+UART.c(43): warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+        GPIOA->OSPEEDR |=   0xF<<4||(3<<6);                                             
+                                  ^ ~~~~~~
+UART.c(43): note: use '|' for a bitwise operation
+        GPIOA->OSPEEDR |=   0xF<<4||(3<<6);                                             
+                                  ^~~
+                                  |
+UART.c(43): warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
+        GPIOA->OSPEEDR |=   0xF<<4||(3<<6);                                             
+                               ^
+UART.c(43): warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
+        GPIOA->OSPEEDR |=   0xF<<4||(3<<6);                                             
+                                      ^
+UART.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->PUPDR   &= ~(0xF<<4);
+                       ~~ ^~~~~~~~~
+UART.c(50): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->OTYPER  &=  ~(0x3<<2) ;          
+                       ~~  ^~~~~~~~~
+UART.c(43): warning: code will never be executed [-Wunreachable-code]
+        GPIOA->OSPEEDR |=   0xF<<4||(3<<6);                                             
+                                     ^
+UART.c(109): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+        for (i = 0; i < nBytes; i++) {
+                    ~ ^ ~~~~~~
+8 warnings generated.
+compiling UART.c...
+linking...
+Program Size: Code=7508 RO-data=964 RW-data=0 ZI-data=1680  
+".\Objects\bai1.axf" - 0 Error(s), 31 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.11.0.pack
+                Keil.STM32F4xx_DFP.2.11.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.0
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

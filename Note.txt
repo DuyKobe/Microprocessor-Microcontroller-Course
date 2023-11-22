@@ -1,0 +1,10 @@
+Bài 1: bấm nút thay đổi 4 LED sáng
+Bài 2: Dùng polling systick làm nhấp nháy đèn theo tần số cố đinh
+Bài 3: Dùng systick interupt để thay đổi tần số nhấp nháy đèn. 
+Bai 4: dùng button để thay đổi tần số nhấp nháy 1 đèn và chuyển đèn sáng (3 đèn khác nhấp nháy theo chu kì cố định) . Xét thêm trường hợp bấm giữ nút bấm đèn sẽ luôn sáng. 
+_C1: kết hợp ngắt Systick Timer và EXTI0
+_C2: Kết hợp ngắt TIMER2 và EXTI0
+Bai 5: UART
+Bai 6: Bật tắt đèn bằng output compare toggle mode
+Bài 7: adc  single conversion
+Bai 8: ADC continous conversion

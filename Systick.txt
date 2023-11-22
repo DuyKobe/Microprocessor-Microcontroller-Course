@@ -1,0 +1,10 @@
+Systick là Timer của core
+_> tạo ngắt, polling 
++ Đếm lùi từ giá trị RELOAD về O, về 0 sẽ bật cờ COUNTFLAG = 1
+* dẠNG 1: Polling (Chương 4.4 cuốn M4)
++Cấu hình GPIO
++ Set giá trị RELOAD: 
+Thời gian 1 tick: 1/16000000 -> n tick tương ứng 1 chu kì Timer 
+Systick -> LOAD = n tick -1;
+
+

@@ -1,0 +1,199 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: st Admin, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\Chuyen nganh\Keilc\Bai4_C2\bai3.uvprojx
+Project File Date:  09/17/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f407xx.s...
+RTE/Device/STM32F407VGTx/system_stm32f4xx.c(67): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(13): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(14): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+2 warnings generated.
+compiling system_stm32f4xx.c...
+main.c(22): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void tim2_10ms_init(){
+                   ^
+                    void
+main.c(22): warning: no previous prototype for function 'tim2_10ms_init' [-Wmissing-prototypes]
+void tim2_10ms_init(){
+     ^
+main.c(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void tim2_10ms_init(){
+^
+static 
+main.c(38): warning: no previous extern declaration for non-static variable 'delay_ticks' [-Wmissing-variable-declarations]
+uint32_t delay_ticks = 200;
+         ^
+main.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t delay_ticks = 200;
+^
+main.c(49): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void Interrupt_Configuration(){
+                            ^
+                             void
+main.c(53): warning: // comments are not allowed in this language [-Wcomment]
+//      EXTI -> FTSR |= TR0_EN;
+^
+main.c(54): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        NVIC_EnableIRQ(EXTI0_IRQn);; //Enable interrupt
+                                   ^
+main.c(49): warning: no previous prototype for function 'Interrupt_Configuration' [-Wmissing-prototypes]
+void Interrupt_Configuration(){
+     ^
+main.c(49): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Interrupt_Configuration(){
+^
+static 
+main.c(56): warning: no previous extern declaration for non-static variable 'last' [-Wmissing-variable-declarations]
+int last = 0;
+    ^
+main.c(56): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int last = 0;
+^
+main.c(57): warning: no previous extern declaration for non-static variable 'flag' [-Wmissing-variable-declarations]
+int flag = 0;
+    ^
+main.c(57): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int flag = 0;
+^
+main.c(58): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+int counter =0;
+    ^
+main.c(58): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int counter =0;
+^
+main.c(59): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
+uint8_t count = 2;
+        ^
+main.c(59): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t count = 2;
+^
+main.c(63): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+                blue = 0,
+                        ^
+main.c(65): warning: no previous extern declaration for non-static variable 'i' [-Wmissing-variable-declarations]
+int i = 0;
+    ^
+main.c(65): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int i = 0;
+^
+main.c(83): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                GPIOD -> ODR &= ~(LED_BLUE);
+                                             ~~ ^~~~~~~~~~~
+main.c(86): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                GPIOD -> ODR &= ~(LED_BLUE);
+                                             ~~ ^~~~~~~~~~~
+main.c(93): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                GPIOD -> ODR &= ~(LED_RED);
+                                             ~~ ^~~~~~~~~~
+main.c(96): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                GPIOD -> ODR &= ~(LED_RED);
+                                             ~~ ^~~~~~~~~~
+main.c(66): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void){
+     ^
+main.c(66): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void){
+^
+static 
+main.c(71): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+        if (counter >= delay_ticks){
+            ~~~~~~~ ^  ~~~~~~~~~~~
+main.c(103): warning: no previous extern declaration for non-static variable 'num' [-Wmissing-variable-declarations]
+int num = 0;
+    ^
+main.c(103): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int num = 0;
+^
+main.c(104): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main(){
+        ^
+         void
+main.c(117): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> MODER &= ~USER_BUTTON;
+                       ~~ ~^~~~~~~~~~~
+main.c(13): note: expanded from macro 'USER_BUTTON'
+#define USER_BUTTON 3<<0
+                     ^
+main.c(117): warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        GPIOA -> MODER &= ~USER_BUTTON;
+                          ~^~~~~~~~~~~
+main.c(13): note: expanded from macro 'USER_BUTTON'
+#define USER_BUTTON 3<<0
+                     ^
+main.c(129): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(133): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler(void){
+     ^
+main.c(133): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler(void){
+^
+static 
+25 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=1384 RO-data=424 RW-data=8 ZI-data=1656  
+".\Objects\bai1.axf" - 0 Error(s), 27 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.11.0.pack
+                Keil.STM32F4xx_DFP.2.11.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.0
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
