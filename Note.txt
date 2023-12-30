@@ -8,3 +8,4 @@ Bai 5: UART
 Bai 6: Bật tắt đèn bằng output compare toggle mode
 Bài 7: adc  single conversion
 Bai 8: ADC continous conversion
+Bài 9: Set clock Timer
